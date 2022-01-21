@@ -1,5 +1,17 @@
+/* ***********************DOCUMENTACION***********************
+- Programa: Practica 8. 
+- Version: Jueves 20 de enero de 2022.
+- Autor: Edgar Daniel Rodriguez Herrera  
+- Descripcion: Clase Lligada que contiene metodos para agregar
+  y remover elementos del inicio, el final y la mitad del
+  LinkedList L. Ademas de un metodo para desplegar dicha lista.  
+- Datos de entrada: Sin datos de entrada.
+- Datos de salida: Sin datos de salida.          
+**************************DOCUMENTACION*********************** */
+
 import java.util.LinkedList;
 import java.util.Random;
+import java.util.ListIterator;
 
 public class Lligada {
 	
@@ -60,5 +72,23 @@ public class Lligada {
 		}
 	}
 	
+	public void despliega() {
+		ListIterator<Integer> itr;
+		itr= L.listIterator();
+		
+		while(itr.hasNext()== true) {
+			System.out.println(itr.next());
+		}
+		System.out.println("\n");
+	}
 	
+	public void desplieg_reversa() {
+		ListIterator<Integer> itr;
+		itr= L.listIterator(L.size());
+		
+		while(itr.hasPrevious()== true) {
+			System.out.println(itr.previous());
+		}
+		System.out.println("\n");
+	}
 }
